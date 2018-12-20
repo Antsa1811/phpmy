@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "−//W3C//DTDXHTML1.0Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1−strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"xml:lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Pratique reel de mysql et php</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+</head>
+<body>
+   <div class="container" >
+     <div class="card bg-muted margin-top">
+       <div class="card-header">
+            <h3 class="lead"> Teste de formulaire pour php et mysql </h3>
+       </div>
+       <div class="card-body" >
+           <form method="post" action="" class="margin-top">
+               <div class="row">
+
+                       <div class="col-lg-6" >
+                           <label class="col-form-legends">titre</label><input type="text" name="titre" id="titre" class="form-control" placeholder="Titre"/>
+                       </div>
+                       <div class="col-lg-6" >
+                           <label>Année</label><input type="text" class="form-control" name="annee" id="annee" placeholder="Annee">
+                       </div>
+                   </div>
+               <div class="margin-top text-center" >
+                   <div class="btn-group">
+                       <label class="btn btn-success" ><input type="checkbox">Comedie</label>
+                       <label class="btn btn-success" ><input type="checkbox">Drame</label>
+                       <label class="btn btn-success" ><input type="checkbox">Histoire</label>
+                       <label class="btn btn-success" ><input type="checkbox">Suspense</label>
+                   </div>
+               </div>
+
+               <div class="margin-top text-center" >
+                   <div class="btn-group">
+                       <label class="btn btn-primary" ><input type="radio">France</label>
+                       <label class="btn btn-primary" ><input type="radio">Anglais</label>
+                       <label class="btn btn-primary" ><input type="radio">Allemagne</label>
+                       <label class="btn btn-primary" ><input type="radio">Japons</label>
+                   </div>
+               </div>
+               <div class="margin-top">
+               <div class="row" >
+                       <div class="col-md-2" >
+                           <label>Affiche du film</label>
+                       </div>
+                       <div class="col-md-4" >
+                           <input type="text" name="affilm" id="affilm" class="form-control">
+                       </div>
+                   <div class="col-md-4" >
+                       <button class="btn btn-primary" id="btnFilm" name="btnFilm"> Parcourir </button>
+                   </div>
+               </div>
+               </div>
+
+               <div class="margin-top">
+                    <label for="metScene">Metteur en scene :</label>
+                    <select name="metScene" class="form-control" id="metScene" >
+                    <option value="Selection de la production"></option>
+                    <option value="avoko" >Avoko production</option>
+                    <option value="simba" >Vassimba production</option>
+                    <option value="melBrouks" >Mel brouks</option>
+                    <option value="horizon" >Horizon production</option>
+                    </select>
+               </div>
+
+               <div class="margin-top" >
+                 <label for="">Resumé</label>
+                 <textarea name="resume" id="resume" class="form-control" rows="4" cols="80"></textarea>
+               </div>
+
+               <div class="margi-top <text-center></text-center>">
+                 <h3>Votre choix</h3><br/>²
+                 <div class="text center">
+                   <button id="valide" class="btn btn-primary">Valider</button>
+                   <button id="annuler" class="btn btn-danger">Anuller</button>
+                 </div>
+               </div>
+
+
+
+           </form>
+       </div>
+       <div class="card-footer">
+
+
+       </div>
+
+     </div>
+
+   </div>
+
+</body>
+</html>
