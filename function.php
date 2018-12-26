@@ -1,5 +1,5 @@
 <?php
-function  bddBase($PARAM_hote,$PARAM_port,$PARAM_nom_bd)
+function  bddBase($PARAM_hote,$PARAM_port,$PARAM_nom_bd,$PARAM_utilisateur,$PARAM_mot_passe)
 {
 /*$PARAM_hote='localhost';
 $PARAM_port='3306';
