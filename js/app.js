@@ -20,6 +20,8 @@ var destinataire=$("#destinataire").val();
 var sujet=$("#sujet").val();
 var text=$("#message").val();
 
+
+
 var request=$("#request");
 
 $.ajax({
@@ -62,12 +64,13 @@ $('#btnModif').click(function(e){
     var description=$("#description").val();
 
     var request1=$("#request1");
-
+    var id=$("#id").val();
+    console.log(id);
 
     $.ajax({
         url:"reqModif.php",
         type:"POST",
-        data:"titre="+titre+"&auteur="+auteur+"&description="+description,
+        data:"titre="+titre+"&auteur="+auteur+"&description="+description+"&id="+id,
         success:function(response)
         {
             if(response=="true")
