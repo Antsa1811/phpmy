@@ -18,9 +18,6 @@ if($requestMail[0]==true)
     $crud="INSERT INTO email(destinataire,sujet,text) values (?,?,?)";
     xRequet($crud,$tab);
 
-}else
-{
-
 }
 
 

@@ -1,7 +1,7 @@
 <?php
-require'function.php';
+require'exeFichier.php';
 
-	bddBase("localhost","3306","phpmy","root","");
+
 	global $bdd;
 
 	$id=isset($_POST['id']) ? $_POST['id']:"";
@@ -19,9 +19,9 @@ require'function.php';
 		{
 			echo "true";
 			/*$req=$bdd->prepare("UPDATE film SET titre=:titre, auteur=:auteur, description=:description WHERE id=:id");
-			$req->execute(array('titre'=>$titre,'auteur'=>$auteur,'description'=>$description,'id'=>$id));*/
+			$req->execute(array('titre'=>$titre,'auteur'=>$auteur,'description'=>$description,'id'=>$id));
 			
-			/*$crud="UPDATE film SET titre=:titre, auteur=:auteur, description=:description WHERE id=:id";
+			$crud="UPDATE film SET titre=:titre, auteur=:auteur, description=:description WHERE id=:id";
 			$tabCrud='titre'=>$titre,'auteur'=>$auteur,'description'=>$description,'id'=>$id;*/
 
 			$crud="UPDATE film SET titre=?,auteur=?,description=? WHERE id=?";

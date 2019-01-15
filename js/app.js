@@ -12,6 +12,13 @@ $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
 
+function reset(text)
+{
+    text.text('');
+}
+
+
+
 $(document).ready(function(){
 $("#btnEvoyer").click(function(e){
 e.preventDefault();
@@ -20,7 +27,7 @@ var destinataire=$("#destinataire").val();
 var sujet=$("#sujet").val();
 var text=$("#message").val();
 
-
+var resetDestinataire = $("#destinataire");
 
 var request=$("#request");
 
@@ -32,14 +39,17 @@ $.ajax({
     {
         if(response=="formeValid")
         {
-            request.text("Ajout du formulaire");
-            location.href="baseTeste.php";
+            /*request.text("Ajout du formulaire");
+            location.href="baseTeste.php";*/
+            toastr.success('Transfert Terminer');
+            
                 
 
         }else
         {
            
-            request.text("Formulaire vide veuillez verifier");
+            //request.text("Formulaire vide veuillez verifier");
+            toastr.error('Transfert echouer');
            
         }
     }
