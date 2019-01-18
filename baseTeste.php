@@ -21,7 +21,7 @@ require 'function.php';
                   <h3 class="p-2" >Formulaire de messagerie</h3>
               </div>
               <div class="card-body">
-                  <form action="" method="POST">
+                  <form action="" id="baseteste" method="POST">
                         <div class="form-group">
                             <label for="destinataire">Destinataire</label>
                             <input type="text" name="destinataire" id="destinataire" placeholder="Le destinataire" class="form-control" required="required" maxlength="25">
@@ -43,11 +43,12 @@ require 'function.php';
           </div>
       </div>
       <hr/>
-     <h3 id="request"  name="request" class="alert alert-info text-center"></h3>
+     
 
     <a href="index.php" class="btn btn-info">Lien pour revenir index.php</a>
 
       <button class="btn btn-info" name="btnToast" id="btntoast" >Alert teste</button>
+      <button class="btn btn-primary" name="reset" id="reset" >Reset</button>
   </div>
 
   <!--DEBUT D INSERTION JAVASCRIPT -->
