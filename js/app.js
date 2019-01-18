@@ -27,6 +27,9 @@ var destinataire=$("#destinataire").val();
 var sujet=$("#sujet").val();
 var text=$("#message").val();
 
+var formulaire=$("#baseteste");
+ 
+
 var resetDestinataire = $("#destinataire");
 
 var request=$("#request");
@@ -41,7 +44,9 @@ $.ajax({
         {
             /*request.text("Ajout du formulaire");
             location.href="baseTeste.php";*/
+            formulaire[0].reset();
             toastr.success('Transfert Terminer');
+          	
             
                 
 
@@ -75,7 +80,7 @@ $('#btnModif').click(function(e){
 
     var request1=$("#request1");
     var id=$("#id").val();
-    console.log(id);
+    
 
     $.ajax({
         url:"reqModif.php",
@@ -85,17 +90,25 @@ $('#btnModif').click(function(e){
         {
             if(response=="true")
             {
-                request1.text('Mise à jour reussie');
+                  toastr.success('Modification reussie Terminer');
             }
             else
             {
-               request1.text('veuillez verifier votre formulaire'); 
+              		toastr.error('Echec de la modification');
             }
         }
 
 //FIN AJAX 
     })
 //FIn BOUTTON VERIF FILM
+});
+
+var formulaire=$("#baseteste");
+
+$("#reset").click(function(e){
+    e.preventDefault();
+    formulaire[0].reset();
+
 });
 
 //END JQUERY
