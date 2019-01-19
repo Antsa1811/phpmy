@@ -18,10 +18,12 @@
         <a href="baseTeste.php" class="btn btn-primary">Lien pour baseTeste.php </a>
         <a href="filmForm.php" class="btn btn-primary">Lien pour filmForm.php </a>
         <a href="recherche.php" class="btn btn-primary">Rechercher film </a>
-        
+        <a href="minichat.php" class="btn btn-primary"> Mini chat </a>
 
 
-    
+
+
+
     </div>
   </body>
 </html>
