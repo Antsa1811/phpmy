@@ -20,10 +20,31 @@
         <a href="recherche.php" class="btn btn-primary">Rechercher film </a>
         <a href="minichat.php" class="btn btn-primary"> Mini chat </a>
 
+        <div class="row">
+            <div class="col-sm-12">
+			
+			<div id="my-slider" class="carousel-slide" data-ride="carousel" ></div>
+					
+					<div class="carousel-inner" role="listbox" >
+						<div class="item"></div>
+					</div>
+
+
+            </div>
+        </div>
 
 
 
-
+    <!-- END CONTAINER -->
     </div>
+
+
+    <!--DEBUT D INSERTION JAVASCRIPT -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+    <script type="text/javascript" src="js/popper.min.js" ></script>
+    <script type="text/javascript" src="js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="js/app.js" ></script>
+    <script type="text/javascript" src="js/toast.min.js" ></script>
+    <script type="text/javascript" src="js/app2.js"></script>
   </body>
 </html>

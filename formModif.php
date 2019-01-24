@@ -48,6 +48,7 @@ $reqTab=$req->fetch();
                     
                    
                 </form>
+                 <a href="index.php" class="btn btn-info">Page aceuil</a>
             </div>
 
 <!-- STARTS SCRIPT JAVASCRIPT -->

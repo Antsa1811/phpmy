@@ -41,13 +41,47 @@ require'exeFIchier.php';
             </div>
 
             <div class="card-footer">Voir les commentaire recents</div>
+
+        </div>
+        <a href="index.php" class="btn btn-info margin-top">Lien pour revenir index.php</a>
+        <button type="button" class="btn btn-primary margin-top" data-toggle="modal" data-target="#minichat" >Ajouter des commentaire</button>
+      
+        <!--Modal pour le formulaire minichat -->
+
+
+</div>
+
+
+    <div class="modal fade" id="minichat" tabindex="-1" role="dialog" aria-labelledby="modalMinichat" aria-hidden="true">
+        <div class="modal-dialog" role="document" >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalMinichat" >Ajouter votre commentaire</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Fermer"  >
+                        <span aria-hidden="true" >x</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formChat" action="requestChat.php" method="POST" >
+                        <div class="form-group">
+                            <label for="pseudo" class="form-group-label">Votre pseudo</label>
+                            <input type="text" class="form-control" id="pseudo" name="pseudo" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pseudo" class="form-group-label">Votre pseudo</label>
+                            <textarea name="comment" class="form-control" id="comment" cols="30" rows="5" required></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-danger" type="button" data-dismiss="modal" >Fermer</button>
+                            <button class="btn btn-success" id="btnOk" name="btnOk" type="submit" >Somettre le formulaire</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
         </div>
     </div>
-    <hr/>
-
-
-    <a href="index.php" class="btn btn-info">Lien pour revenir index.php</a>
-
 </div>
 
 <!--DEBUT D INSERTION JAVASCRIPT -->

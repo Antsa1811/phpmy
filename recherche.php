@@ -1,5 +1,9 @@
 <?php
-require 'find.php';
+if(isset($_POST ['btnfind']))
+{
+    require 'find.php';
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -16,7 +20,7 @@ require 'find.php';
                  <h2 class="text-info text-center">Recherche film</h2>
              </div>
              <div class="card-body">
-                <form action="find.php" method="POST">
+                <form action="recherche.php" method="POST">
                     <div class="formgroup">
                         <label for="filmFind">Film à rechercher</label>
                         <input type="text" class="form-control" id="filmFind" name="filmFind">
@@ -30,7 +34,15 @@ require 'find.php';
                 </form>
             </div>
             <h2 class="text-info text-center">Resultat afficher</h2>
-            <?php require 'tabloFind.php'; ?>
+            <?php
+            /*if(isset($_POST['btnfind']))
+            {
+                require 'tabloFind.php';
+            }*/
+
+            require 'tabloFind.php';
+
+            ?>
 
 
 <!-- STARTS SCRIPT JAVASCRIPT -->

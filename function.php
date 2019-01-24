@@ -46,6 +46,21 @@ function verifMail($destinataire,$sujet,$message)
     return array($return,$error);
 
 }
+
+function checkString($string)
+{
+    $return =true;
+
+    if(empty($string) || !filter_var($string,FILTER_SANITIZE_STRING))
+    {
+        $return=false;
+    }
+
+    return $return;
+
+}
+
+
 function xRequet($crud,$tab)
 {
     global $bdd;
@@ -58,6 +73,16 @@ function affiche($crud)
     $req=$bdd->prepare($crud);
     $req->execute();
     $reqTab=$req->fetchall();
+
+    return $reqTab;
+}
+
+function afficheSolo($crud)
+{
+    global $bdd;
+    $req=$bdd->prepare($crud);
+    $req->execute();
+    $reqTab=$req->fetch();
 
     return $reqTab;
 }
@@ -113,5 +138,6 @@ function recherche($crud)
 
 
 }
+
 
  ?>
