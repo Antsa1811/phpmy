@@ -134,9 +134,32 @@ function recherche($crud)
     $userExist=$req->rowCount();
 
     return $userExist;
+}
 
+//FUNCTION FORM COOKIES
+ function formCommande($typeChoix,$script,$connexion)
+{
+    if($typeChoix == "entrer")
+    {
+        echo "Choissisez votre entrer ";
+    }
+    else if($typeChoix=="plats")
+    {
+        echo "Choissisez votre plats";
+    }
+    else
+    {
+        echo "Choissisez votre desserts";
+    }
 
+    //  AFFICHAGE DE FORM
+    echo "<form action='$script' method='post'>\n";
 
+    echo "<input type='hidden' name='typeChoix' value='$typeChoix' />";
+
+    global $bdd;
+
+    $req=$bdd->prepare("SELECT * FROM cart WHERE type='$typeChoix'");
 }
 
 
