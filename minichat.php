@@ -1,6 +1,9 @@
 <?php
 require'exeFIchier.php';
 
+$crud="SELECT * FROM minichat";
+$tab=affiche($crud);
+
 ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -27,12 +30,25 @@ require'exeFIchier.php';
                         <thead class="text-center">
                         <tr >
                             <th class="text-center"> Pseudo </th>
-                            <th class="text-center"> Date </th>
                             <th class="text-center"> Commentaire </th>
+                            <th class="text-center"> Date </th>
                         </tr>
                         </thead>
                         <tbody>
-
+                            <?php 
+                                foreach($tab as $tablo)
+                                {
+                                    ?>
+                            <tr>
+                                
+                                <td><?php echo $tablo[1]; ?></td>
+                                <td><?php echo $tablo[2]; ?></td>
+                                <td><?php echo $tablo[3]; ?></td>
+                                 
+                            </tr>
+                            <?php
+                                }
+                                ?>
                         </tbody>
 
                     </table>
@@ -44,7 +60,7 @@ require'exeFIchier.php';
 
         </div>
         <a href="index.php" class="btn btn-info margin-top">Lien pour revenir index.php</a>
-        <button type="button" class="btn btn-primary margin-top" data-toggle="modal" data-target="#minichat" >Ajouter des commentaire</button>
+        <button type="button" class="btn btn-primary margin-top" data-toggle="modal" data-target="#minichat" >Ajouter des commentaires</button>
       
         <!--Modal pour le formulaire minichat -->
 
@@ -62,19 +78,19 @@ require'exeFIchier.php';
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="formChat" action="requestChat.php" method="POST" >
+                    <form id="formChat" action="" method="POST" >
                         <div class="form-group">
                             <label for="pseudo" class="form-group-label">Votre pseudo</label>
-                            <input type="text" class="form-control" id="pseudo" name="pseudo" required>
+                            <input type="text" class="form-control" id="pseudo" name="pseudo" require="required">
                         </div>
 
                         <div class="form-group">
-                            <label for="pseudo" class="form-group-label">Votre pseudo</label>
-                            <textarea name="comment" class="form-control" id="comment" cols="30" rows="5" required></textarea>
+                            <label for="pseudo" class="form-group-label">Votre commentaire</label>
+                            <textarea name="comment" class="form-control" id="comment" cols="30" rows="5" require="required"></textarea>
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn-danger" type="button" data-dismiss="modal" >Fermer</button>
-                            <button class="btn btn-success" id="btnOk" name="btnOk" type="submit" >Somettre le formulaire</button>
+                            <button class="btn btn-success" id="btnModal" name="btnModal" type="submit" >Somettre le formulaire</button>
                         </div>
                     </form>
                 </div>

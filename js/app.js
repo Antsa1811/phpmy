@@ -103,13 +103,51 @@ $('#btnModif').click(function(e){
 //FIn BOUTTON VERIF FILM
 });
 
+//RESET FORMULAIRE
 var formulaire=$("#baseteste");
 
 $("#reset").click(function(e){
     e.preventDefault();
     formulaire[0].reset();
 
+
+
+
 });
+
+
+//Boutton pour modal
+    $("#btnModal").click(function(e){
+
+        e.preventDefault();
+
+        var pseudo=$("#pseudo").val();
+        var comment=$("#comment").val();
+
+
+        $.ajax({
+            url:"requestChat.php",
+            type:"POST",
+            data:"pseudo="+pseudo+"&comment="+comment,
+            success:function(response)
+            {
+               if(response == "formTrue")
+               {
+                   toastr.success("Votre formulaire est valider");
+                   location.href="minichat.php";
+               }
+               else
+               {
+                   toastr.error("Votre formulaire n'est pas valider");
+               }
+            }
+
+
+        //END AJAX
+        });
+
+    });
+
 
 //END JQUERY
 });

@@ -20,21 +20,15 @@ if($reqPseudo == true || $reqComment == true)
     $crud="INSERT INTO minichat(pseudo,commentaire,dateInsert) VALUES (?,?,?)";
 
 
-    var_dump($dateM);
+
 
     xRequet($crud,$tab);
 
 
-    echo "valid form true";
+
+    echo "formTrue";
 
  /* $req=$bdd->prepare('INSERT INTO minichat(pseudo,commentaire,dateInsert) VALUES (?,?,?);');
    $req->execute(array($pseudo,$comment,now()));*/
 }
-else
-{
-    echo "c'est vide";
-}
-
-
-
 ?>
